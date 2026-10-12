@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <rect width="300" height="300" rx="28" fill="#eff6ff"/>
+        <circle cx="150" cy="150" r="95" fill="#bfdbfe" opacity="0.4"/>
+        <!-- Mascota Liebre Azulito Cruz Azul Plush -->
+        <!-- Bunny / Hare long ears -->
+        <ellipse cx="115" cy="70" rx="14" ry="48" fill="#f8fafc" stroke="#1d4ed8" stroke-width="4"/>
+        <ellipse cx="115" cy="70" rx="8" ry="36" fill="#3b82f6"/>
+        <ellipse cx="185" cy="70" rx="14" ry="48" fill="#f8fafc" stroke="#1d4ed8" stroke-width="4"/>
+        <ellipse cx="185" cy="70" rx="8" ry="36" fill="#3b82f6"/>
+        <!-- Head -->
+        <circle cx="150" cy="140" r="55" fill="#f8fafc" stroke="#1d4ed8" stroke-width="4"/>
+        <!-- Cruz Azul Blue Bandana / Headband -->
+        <path d="M100 120 Q150 130 200 120" stroke="#1d4ed8" stroke-width="12" fill="none" stroke-linecap="round"/>
+        <!-- Red Cross Logo on Headband -->
+        <rect x="146" y="115" width="8" height="12" fill="#ef4444"/>
+        <rect x="144" y="117" width="12" height="8" fill="#ef4444"/>
+        <!-- Cute Eyes -->
+        <circle cx="132" cy="145" r="7" fill="#1e3a8a"/>
+        <circle cx="134" cy="143" r="2.5" fill="#ffffff"/>
+        <circle cx="168" cy="145" r="7" fill="#1e3a8a"/>
+        <circle cx="170" cy="143" r="2.5" fill="#ffffff"/>
+        <!-- Cheeks -->
+        <circle cx="118" cy="153" r="6" fill="#bfdbfe"/>
+        <circle cx="182" cy="153" r="6" fill="#bfdbfe"/>
+        <!-- Snout -->
+        <polygon points="146,152 154,152 150,157" fill="#ef4444"/>
+        <path d="M145 159 Q150 164 150 159 Q155 164 155 159" stroke="#1e3a8a" stroke-width="2.5" fill="none"/>
+        <!-- Blue Jersey Body -->
+        <path d="M110 190 Q150 200 190 190 L185 245 L115 245 Z" fill="#2563eb" stroke="#1d4ed8" stroke-width="4"/>
+        <!-- White Cross / Cruz Azul crest on chest -->
+        <circle cx="150" cy="215" r="14" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+        <rect x="148" y="207" width="4" height="16" fill="#dc2626"/>
+        <rect x="142" y="213" width="16" height="4" fill="#dc2626"/>
+    </svg>

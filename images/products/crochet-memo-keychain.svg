@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <rect width="300" height="300" rx="28" fill="#f0fdf4"/>
+        <circle cx="150" cy="150" r="95" fill="#bbf7d0" opacity="0.4"/>
+        <!-- Keychain ring -->
+        <circle cx="150" cy="45" r="16" fill="none" stroke="#94a3b8" stroke-width="4"/>
+        <line x1="150" y1="61" x2="150" y2="85" stroke="#94a3b8" stroke-width="4"/>
+        <!-- Amigurumi Memo head -->
+        <circle cx="150" cy="150" r="65" fill="#f1f5f9" stroke="#64748b" stroke-width="4"/>
+        <!-- Ears -->
+        <polygon points="105,108 120,68 142,105" fill="#cbd5e1" stroke="#64748b" stroke-width="4"/>
+        <polygon points="158,105 180,68 195,108" fill="#cbd5e1" stroke="#64748b" stroke-width="4"/>
+        <!-- Tabby stripes -->
+        <path d="M150 90 L150 110 M140 95 L143 112 M160 95 L157 112" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+        <!-- Greenish blue Eyes -->
+        <ellipse cx="128" cy="145" rx="8" ry="11" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+        <ellipse cx="172" cy="145" rx="8" ry="11" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+        <circle cx="130" cy="143" r="3" fill="#ffffff"/>
+        <circle cx="174" cy="143" r="3" fill="#ffffff"/>
+        <!-- Pink nose -->
+        <polygon points="146,155 154,155 150,161" fill="#f43f5e"/>
+        <path d="M144 163 Q150 167 150 161 Q150 167 156 163" stroke="#475569" stroke-width="2.5" fill="none"/>
+        <circle cx="112" cy="158" r="7" fill="#fbcfe8"/>
+        <circle cx="188" cy="158" r="7" fill="#fbcfe8"/>
+    </svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <defs>
+            <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#86efac"/>
+                <stop offset="100%" stop-color="#16a34a"/>
+            </linearGradient>
+        </defs>
+        <path d="M50 85 Q20 55 35 25 Q65 15 75 45 Q80 75 50 85 Z" fill="url(#leafGrad)" stroke="#15803d" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M50 85 Q52 55 55 25" stroke="#dcfce7" stroke-width="2.5" fill="none"/>
+        <path d="M48 60 Q38 52 35 50" stroke="#dcfce7" stroke-width="2" fill="none"/>
+        <path d="M52 50 Q65 45 68 42" stroke="#dcfce7" stroke-width="2" fill="none"/>
+        <circle cx="25" cy="30" r="3" fill="#fef08a"/>
+        <circle cx="75" cy="25" r="2.5" fill="#fef08a"/>
+        <circle cx="80" cy="65" r="2" fill="#fef08a"/>
+    </svg>

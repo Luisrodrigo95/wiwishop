@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <rect width="300" height="300" rx="28" fill="#eff6ff"/>
+        <circle cx="150" cy="150" r="95" fill="#93c5fd" opacity="0.4"/>
+        <!-- Mini Pet Jersey -->
+        <path d="M90 100 L60 145 L85 160 L100 135 L100 235 L200 235 L200 135 L215 160 L240 145 L210 100 Z" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="4" stroke-linejoin="round"/>
+        <!-- Collar white trim -->
+        <path d="M125 100 Q150 120 175 100" fill="#ffffff" stroke="#1e3a8a" stroke-width="2"/>
+        <!-- Sleeve white stripes -->
+        <line x1="68" y1="140" x2="80" y2="152" stroke="#ffffff" stroke-width="4"/>
+        <line x1="232" y1="140" x2="220" y2="152" stroke="#ffffff" stroke-width="4"/>
+        <!-- Cruz Azul crest -->
+        <circle cx="150" cy="160" r="22" fill="#ffffff" stroke="#1e3a8a" stroke-width="3"/>
+        <circle cx="150" cy="160" r="18" fill="none" stroke="#dc2626" stroke-width="2"/>
+        <rect x="147" y="148" width="6" height="24" fill="#dc2626"/>
+        <rect x="138" y="157" width="24" height="6" fill="#dc2626"/>
+        <text x="150" y="215" font-family="sans-serif" font-weight="900" font-size="20" text-anchor="middle" fill="#ffffff">WIWI</text>
+    </svg>

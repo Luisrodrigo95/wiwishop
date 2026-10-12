@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <rect width="300" height="300" rx="28" fill="#eff6ff"/>
+        <circle cx="150" cy="150" r="95" fill="#bfdbfe" opacity="0.4"/>
+        <!-- Blue Bucket Hat with Michi ears -->
+        <polygon points="90,110 105,75 125,110" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="4"/>
+        <polygon points="175,110 195,75 210,110" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="4"/>
+        <polygon points="100,105 106,85 118,105" fill="#ef4444"/>
+        <polygon points="182,105 194,85 200,105" fill="#ef4444"/>
+        <!-- Crown -->
+        <path d="M85 170 C85 105 215 105 215 170 Z" fill="#2563eb" stroke="#1e3a8a" stroke-width="4"/>
+        <!-- Brim -->
+        <path d="M55 200 C55 175 245 175 245 200 C245 215 55 215 55 200 Z" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="4"/>
+        <!-- White embroidered Cruz Azul patch -->
+        <circle cx="150" cy="145" r="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+        <rect x="148" y="137" width="4" height="16" fill="#dc2626"/>
+        <rect x="142" y="143" width="16" height="4" fill="#dc2626"/>
+    </svg>

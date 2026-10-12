@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Wiwi Shop 🐾 Handmade with Love • Hecho en México</title>
+  <meta name="description" content="Wiwi Shop: 100% handmade products hecho con amor en México. Amigurumis de crochet, joyería artesanal michi y mercancía oficial de Cruz Azulito.">
+  <meta name="theme-color" content="#fdf2f4">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:title" content="Wiwi Shop 🐾 Handmade with Love • Hecho en México">
+  <meta property="og:description" content="Tienda artesanal 100% hecha a mano: Crochet, Joyería y Mercancía Cruz Azulito. ¡Ven a alimentar a nuestro michi Memo!">
+  <meta property="og:image" content="images/wiwi-intro-logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon using Wiwi Logo -->
+  <link rel="icon" type="image/png" href="images/wiwi-logo.png">
+
+  <!-- Google Fonts: Fredoka & Quicksand (Pusheen aesthetic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Wiwi Shop Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. INTRO ANIMATION (3 Seconds Welcome: Wiwi Shop Handmade with Love)
+       ========================================================================= -->
+  <div id="wiwi-intro-screen" class="intro-overlay" role="dialog" aria-modal="true" aria-label="Bienvenida a Wiwi Shop">
+    <!-- Floating pastel sparkles -->
+    <div class="intro-sparkles">
+      <span class="intro-sparkle" style="top: 15%; left: 12%;">✨</span>
+      <span class="intro-sparkle" style="top: 25%; right: 18%; animation-delay: 1s;">🌸</span>
+      <span class="intro-sparkle" style="top: 70%; left: 15%; animation-delay: 1.5s;">🐾</span>
+      <span class="intro-sparkle" style="top: 75%; right: 14%; animation-delay: 0.5s;">💖</span>
+      <span class="intro-sparkle" style="top: 10%; right: 40%; animation-delay: 2s;">⭐</span>
+    </div>
+
+    <div class="intro-content">
+      <div class="intro-badge">
+        <span>🐾</span> BIENVENIDOS A NUESTRA MICHI-TIENDA
+      </div>
+
+      <!-- Intro Animation Image: First attached image (Wiwi Cat inside circle) -->
+      <div class="intro-logo-wrapper">
+        <div class="intro-logo-glow"></div>
+        <img src="images/wiwi-intro-logo.png" 
+             onerror="this.onerror=null; this.src='images/wiwi-intro-original.jpg';" 
+             alt="Wiwi Shop Logo" 
+             class="intro-logo-img">
+      </div>
+
+      <h1 class="intro-title">Wiwi Shop</h1>
+      <p class="intro-tagline">handmade with love</p>
+      
+      <div class="intro-mexico-badge">
+        <span>🇲🇽</span> hecho en México [made in Mexico]
+      </div>
+
+      <!-- 3-Second Countdown Progress Bar -->
+      <div class="intro-timer-bar" title="Iniciando tienda...">
+        <div class="intro-timer-fill"></div>
+      </div>
+
+      <button id="intro-skip-btn" class="intro-skip-btn" type="button">
+        Entrar a la Tienda 🐾
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. TOP ANNOUNCEMENT BAR
+       ========================================================================= -->
+  <aside class="announcement-bar" aria-label="Aviso promocional">
+    <div class="announcement-text">
+      <span>🌸</span>
+      <span>¡100% Hecho a mano con amor en México! Envíos a todo el país • Envío gratis en compras mayores a $499 MXN</span>
+      <span>🐾</span>
+    </div>
+    <div class="announcement-controls">
+      <button id="replay-intro-btn" class="announcement-action" type="button" title="Volver a ver la animación de bienvenida">
+        <i class="fa-solid fa-play"></i> Ver Intro (3s)
+      </button>
+      <button id="currency-toggle-btn" class="currency-toggle" type="button" title="Cambiar Moneda">
+        MXN
+      </button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       3. SITE HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <!-- Normal Wiwi Logo: Second attached image -->
+      <a href="#hero" class="brand-link" aria-label="Ir al inicio de Wiwi Shop">
+        <div class="brand-avatar">
+          <img src="images/wiwi-logo.png" 
+               onerror="this.onerror=null; this.src='images/wiwi-logo-original.jpg';" 
+               alt="Wiwi Logo">
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">Wiwi<span>Shop</span></span>
+          <span class="brand-subtitle">Handmade with Love</span>
+        </div>
+      </a>
+
+      <!-- Store Menu Navigation (3 Sections: Crochet, Jewelry, Cruz Azulito) -->
+      <nav aria-label="Menú principal">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#departments" class="nav-link" data-nav-dept="crochet" onclick="setCatalogFilter('crochet')">
+              🧶 Crochet
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#departments" class="nav-link" data-nav-dept="jewelry" onclick="setCatalogFilter('jewelry')">
+              ✨ Joyería
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#departments" class="nav-link highlight-blue" data-nav-dept="cruz-azulito" onclick="setCatalogFilter('cruz-azulito')">
+              ⚽ Cruz Azulito <span class="nav-badge-new">Fan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#about-wiwi" class="nav-link">
+              💖 ¿Qué es Wiwi Shop?
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#feed-memo" class="nav-link highlight-memo">
+              🐾 Alimenta a Memo
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nav Action Buttons -->
+      <div class="nav-actions">
+        <button id="nav-fav-btn" class="action-btn" type="button" onclick="setCatalogFilter('all')" title="Favoritos" aria-label="Favoritos">
+          <i class="fa-regular fa-heart"></i>
+          <span id="fav-count-badge" class="action-badge" style="display: none;">0</span>
+        </button>
+
+        <button id="cart-open-btn" class="action-btn" type="button" title="Ver Carrito de Compras" aria-label="Carrito de compras">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span id="cart-count-badge" class="action-badge">0</span>
+        </button>
+
+        <button id="mobile-nav-toggle" class="mobile-nav-toggle" type="button" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       4. HERO SECTION
+       ========================================================================= -->
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-text-content">
+            <div class="hero-tag">
+              <span>🇲🇽</span> 100% Hecho a Mano en México
+            </div>
+            <h1 class="hero-title">
+              Pura ternura, <em>hecha con amor</em> en cada puntada.
+            </h1>
+            <p class="hero-description">
+              Te damos la bienvenida a <strong>Wiwi Shop</strong>: la tienda artesanal inspirada en nuestros gatitos 
+              <strong>Wiwi</strong> y <strong>Memo</strong>. Descubre piezas únicas de crochet, joyería delicada 
+              y mercancía exclusiva de Cruz Azulito.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#departments" class="btn-primary" onclick="setCatalogFilter('all')">
+                <i class="fa-solid fa-bag-shopping"></i> Explorar Tienda
+              </a>
+              <a href="#feed-memo" class="btn-secondary">
+                <i class="fa-solid fa-fish"></i> ¡Alimentar a Memo!
+              </a>
+            </div>
+          </div>
+
+          <!-- Wiwi Mascot (Transparent PNG, Full Uncut Head, Interactive Head Movement) -->
+          <div class="hero-mascots">
+            <div class="hero-mascot-wrapper" id="hero-wiwi-interactive" tabindex="0" role="button" aria-label="Wiwi la gatita artesanal" title="¡Haz clic en Wiwi para que mueva la cabecita!">
+              <img src="images/wiwi-head-transparent.png?v=6" 
+                   onerror="this.onerror=null; this.src='images/wiwi-logo.png';" 
+                   alt="Wiwi Cat Mascot" 
+                   class="hero-wiwi-mascot"
+                   id="hero-wiwi-img">
+              <div class="wiwi-interactive-sparkles" id="wiwi-head-sparkles"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. STORE MENU: 3 CORE SECTIONS
+         (Crochet, Jewelry, Cruz Azulito Merchandise)
+         ========================================================================= -->
+    <section id="departments" class="store-menu-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Nuestras Categorías</span>
+          <h2 class="section-title">Elige tu Departamento Favorito</h2>
+          <p class="section-subtitle">
+            Haz clic en cualquiera de las 3 secciones para abrir el menú de productos artesanales.
+          </p>
+        </div>
+
+        <div class="departments-grid">
+          <!-- Department 1: Crochet -->
+          <article class="dept-card crochet active" data-dept="crochet" onclick="setCatalogFilter('crochet')">
+            <div class="dept-icon-wrapper">
+              <i class="fa-solid fa-mitten"></i>
+            </div>
+            <h3 class="dept-title">🧶 Crochet</h3>
+            <p class="dept-desc">
+              Amigurumis suaves, llaveros de Wiwi y Memo, gorros con orejitas michi y portavasos tejidos con estambre de algodón premium.
+            </p>
+            <span class="dept-cta">Ver Productos Crochet →</span>
+          </article>
+
+          <!-- Department 2: Jewelry -->
+          <article class="dept-card jewelry" data-dept="jewelry" onclick="setCatalogFilter('jewelry')">
+            <div class="dept-icon-wrapper">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <h3 class="dept-title">✨ Joyería</h3>
+            <p class="dept-desc">
+              Collares silueta Wiwi en chapa de oro, aretes de perla con orejitas, anillos de plata 925 y pulseras de cuentas pasteles.
+            </p>
+            <span class="dept-cta">Ver Joyería con Amor →</span>
+          </article>
+
+          <!-- Department 3: Cruz Azulito Merchandise -->
+          <article class="dept-card cruz-azulito" data-dept="cruz-azulito" onclick="setCatalogFilter('cruz-azulito')">
+            <div class="dept-icon-wrapper">
+              <i class="fa-solid fa-futbol"></i>
+            </div>
+            <h3 class="dept-title">⚽ Mercancía Cruz Azulito</h3>
+            <p class="dept-desc">
+              Llavero de Peluche Cruz Azulito oficial con reel de 3 fotos, peluches y accesorios celestes. <strong>Productos 100% originales y adquiridos en tiendas Cruz Azul.</strong>
+            </p>
+            <span class="dept-cta">Ver Mercancía Celeste →</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. PRODUCT CATALOG & MENU DISPLAY
+         ========================================================================= -->
+    <section id="catalog-section" class="catalog-section">
+      <div class="container">
+        <!-- Catalog Toolbar: Filter Tabs, Search & Sort -->
+        <div class="catalog-toolbar">
+          <div class="filter-tabs" role="tablist">
+            <button class="tab-btn active" data-filter="all" onclick="setCatalogFilter('all')">
+              🐾 Todos (12)
+            </button>
+            <button class="tab-btn" data-filter="crochet" onclick="setCatalogFilter('crochet')">
+              🧶 Crochet (4)
+            </button>
+            <button class="tab-btn" data-filter="jewelry" onclick="setCatalogFilter('jewelry')">
+              ✨ Joyería (4)
+            </button>
+            <button class="tab-btn" data-filter="cruz-azulito" onclick="setCatalogFilter('cruz-azulito')">
+              ⚽ Cruz Azulito (4)
+            </button>
+          </div>
+
+          <div class="catalog-search-sort">
+            <div class="search-input-wrapper">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="catalog-search" class="search-input" placeholder="Buscar michi-pieza...">
+            </div>
+
+            <select id="catalog-sort" class="sort-select" aria-label="Ordenar productos">
+              <option value="featured">Destacados</option>
+              <option value="price-low">Precio: Menor a Mayor</option>
+              <option value="price-high">Precio: Mayor a Menor</option>
+              <option value="name">Nombre: A a Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dynamic Category Banner (Used for Official Cruz Azul Notice) -->
+        <div id="catalog-category-banner"></div>
+
+        <!-- Products Grid Container -->
+        <div id="products-grid" class="products-grid">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. WHAT WIWI SHOP IS: 100% HANDMADE PRODUCTS
+         (At the very bottom of the main menu / product section)
+         ========================================================================= -->
+    <section id="about-wiwi" class="about-wiwi-section">
+      <div class="container">
+        <div class="about-wiwi-card">
+          <div class="about-header">
+            <span class="about-badge">
+              <span>🇲🇽</span> 100% Hecho a Mano en México
+            </span>
+            <h2 class="about-title">¿Qué es Wiwi Shop? 🐾</h2>
+            <p class="about-lead">
+              100% handmade products: cada creación nace con estambre, paciencia y puro corazón felino.
+            </p>
+            <p class="about-body">
+              <strong>Wiwi Shop</strong> nació del amor incondicional por nuestros michis <strong>Wiwi</strong> y <strong>Memo</strong>, 
+              combinado con el orgullo del arte textil mexicano. En un mundo dominado por la producción en serie, nosotros elegimos 
+              el camino de lo artesanal: cada amigurumi, cada dije pulido a mano y cada prenda de Cruz Azulito es tejida punto por punto 
+              con materiales hipoalergénicos de la más alta calidad. No existen dos piezas exactamente iguales; cuando adquieres un producto 
+              de Wiwi Shop, te llevas una pieza única creada con amor y dedicación en México.
+            </p>
+          </div>
+
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon">🧶</div>
+              <h3 class="pillar-title">100% Tejido & Creado a Mano</h3>
+              <p class="pillar-desc">
+                Cero manufactura masiva. Cada puntada de crochet y cada engaste de joyería es elaborado artesanalmente por manos mexicanas.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">🐾</div>
+              <h3 class="pillar-title">Aprobado por Michis Reales</h3>
+              <p class="pillar-desc">
+                Wiwi y Memo son los supervisores de calidad. Telas seguras, sin sustancias tóxicas, estambres lavables y amor en cada detalle.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">🇲🇽</div>
+              <h3 class="pillar-title">Orgullo & Pasión Mexicana</h3>
+              <p class="pillar-desc">
+                Desde amigurumis tradicionales hasta la mercancía celeste de Cruz Azulito. Llevamos la calidez de México a tu hogar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. INTERACTIVE ANIMATION: FEED MY CAT, MEMO!
+         (In footer / bottom: featuring the third attached image of Memo)
+         ========================================================================= -->
+    <section id="feed-memo" class="feed-memo-section">
+      <div class="container">
+        <div class="feed-memo-container">
+          <div class="feed-memo-header">
+            <h2 class="feed-title">¡Hora del Snack! Alimenta a mi gato Memo 🐾</h2>
+            <p class="feed-subtitle">
+              Memo está esperando sus bocadillos favoritos. ¡Haz clic en cualquiera de los premios para darle de comer!
+            </p>
+          </div>
+
+          <div class="feeding-stage">
+            <!-- Memo Display Stage -->
+            <div class="memo-display-area">
+              <!-- Animated Cat Speech Bubble -->
+              <div class="memo-speech-bubble" id="memo-speech-bubble">
+                <span id="memo-speech-text">¡Miau! Hola humano, soy Memo. ¿Me invitas un premio? 🐾</span>
+              </div>
+
+              <!-- Memo the Cat: Mouth Closed (Idle) & Mouth Open (Eating) -->
+              <div id="memo-cat-box" class="memo-cat-box" title="¡Haz clic en Memo para acariciarlo!">
+                <div id="memo-particles-layer" class="memo-particles-layer"></div>
+                <img src="images/memo-closed.png" 
+                     onerror="this.onerror=null; this.src='images/memo-cat-original.png';" 
+                     alt="Memo el Gato de Wiwi Shop" 
+                     class="memo-cat-img memo-closed-img" 
+                     id="memo-cat-closed">
+                <img src="images/memo-open.png" 
+                     onerror="this.onerror=null; this.src='images/memo-cat-original.png';" 
+                     alt="Memo el Gato comiendo" 
+                     class="memo-cat-img memo-open-img" 
+                     id="memo-cat-open">
+              </div>
+
+              <!-- Memo Ceramic Bowl -->
+              <div class="memo-bowl-container">
+                <div class="memo-ceramic-bowl" id="memo-bowl">
+                  <div class="bowl-rim">
+                    <div class="bowl-food-content" id="bowl-food-content"></div>
+                  </div>
+                  <span class="bowl-label">🐾 MEMO 🐾</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Treats Menu & Interactive Controls -->
+            <div class="treats-menu-area">
+              <div class="treats-card">
+                <div class="treats-instructions">
+                  <span>🍽️</span> Selecciona un premio para Memo:
+                </div>
+
+                <div class="treats-grid">
+                  <!-- Treat 1: Fish -->
+                  <button class="treat-btn" onclick="feedMemo('fish', event)" type="button" title="Dar Pescadito a Memo">
+                    <div class="treat-icon">
+                      <img src="images/treats/fish.svg" alt="Pescadito">
+                    </div>
+                    <span class="treat-name">Pescadito Fresco</span>
+                    <span class="treat-action-tag">¡Dar premio! 🐟</span>
+                  </button>
+
+                  <!-- Treat 2: Chicken -->
+                  <button class="treat-btn" onclick="feedMemo('chicken', event)" type="button" title="Dar Pollito a Memo">
+                    <div class="treat-icon">
+                      <img src="images/treats/chicken.svg" alt="Pollito">
+                    </div>
+                    <span class="treat-name">Pollito Crujiente</span>
+                    <span class="treat-action-tag">¡Dar premio! 🍗</span>
+                  </button>
+
+                  <!-- Treat 3: Milk -->
+                  <button class="treat-btn" onclick="feedMemo('milk', event)" type="button" title="Dar Leche a Memo">
+                    <div class="treat-icon">
+                      <img src="images/treats/milk.svg" alt="Leche">
+                    </div>
+                    <span class="treat-name">Tazón de Leche</span>
+                    <span class="treat-action-tag">¡Dar premio! 🥛</span>
+                  </button>
+
+                  <!-- Treat 4: Catnip -->
+                  <button class="treat-btn" onclick="feedMemo('catnip', event)" type="button" title="Dar Catnip a Memo">
+                    <div class="treat-icon">
+                      <img src="images/treats/catnip.svg" alt="Catnip">
+                    </div>
+                    <span class="treat-name">Catnip Mágico</span>
+                    <span class="treat-action-tag">¡Dar premio! 🌿</span>
+                  </button>
+
+                  <!-- Treat 5: Sushi -->
+                  <button class="treat-btn" onclick="feedMemo('sushi', event)" type="button" title="Dar Sushi a Memo">
+                    <div class="treat-icon">
+                      <img src="images/treats/sushi.svg" alt="Sushi">
+                    </div>
+                    <span class="treat-name">Michi-Sushi</span>
+                    <span class="treat-action-tag">¡Dar premio! 🍣</span>
+                  </button>
+                </div>
+
+                <!-- Feeding HUD Stats -->
+                <div class="feeding-hud">
+                  <div class="hud-item">
+                    <div class="hud-icon">
+                      <i class="fa-solid fa-cookie-bite"></i>
+                    </div>
+                    <div class="hud-details">
+                      <span class="hud-label">Premios Dados</span>
+                      <span class="hud-value" id="memo-fed-count">0 premios</span>
+                    </div>
+                  </div>
+
+                  <div class="hud-item">
+                    <div class="hud-icon">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="hud-details">
+                      <span class="hud-label">Nivel de Felicidad</span>
+                      <span class="hud-value" id="memo-happiness-level">100% Ronroneo</span>
+                    </div>
+                  </div>
+
+                  <button class="pet-memo-btn" onclick="petMemo()" type="button">
+                    <i class="fa-solid fa-hand-holding-heart"></i> Acariciar a Memo en la Cabeza
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       9. FOOTER (Pusheen Shop Aesthetic)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="#hero" class="brand-link">
+            <div class="brand-avatar">
+              <img src="images/wiwi-logo.png" 
+                   onerror="this.onerror=null; this.src='images/wiwi-logo-original.jpg';" 
+                   alt="Wiwi Logo">
+            </div>
+            <div class="brand-info">
+              <span class="brand-title">Wiwi<span>Shop</span></span>
+              <span class="brand-subtitle">Handmade with Love</span>
+            </div>
+          </a>
+          <p class="footer-text">
+            Tienda artesanal mexicana inspirada en la ternura de Wiwi y Memo. 100% hecha a mano con estambre, metales nobles y pasión en México.
+          </p>
+          <div class="footer-cats-chip">
+            <span>🐱 Wiwi (Jefa de Calidad)</span>
+            <span>•</span>
+            <span>🐈 Memo (Cata-Snacks)</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Departamentos</h4>
+          <ul class="footer-links">
+            <li><a href="#departments" class="footer-link" onclick="setCatalogFilter('crochet')">🧶 Crochet Artesanal</a></li>
+            <li><a href="#departments" class="footer-link" onclick="setCatalogFilter('jewelry')">✨ Joyería con Amor</a></li>
+            <li><a href="#departments" class="footer-link" onclick="setCatalogFilter('cruz-azulito')">⚽ Mercancía Cruz Azulito</a></li>
+            <li><a href="#departments" class="footer-link" onclick="setCatalogFilter('all')">🐾 Todos los Productos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Sobre Nosotros</h4>
+          <ul class="footer-links">
+            <li><a href="#about-wiwi" class="footer-link">💖 ¿Qué es Wiwi Shop?</a></li>
+            <li><a href="#feed-memo" class="footer-link">🐟 Alimenta a Memo</a></li>
+            <li><a href="https://therodrigo.com" class="footer-link" target="_blank">🌐 Rodrigo's Portfolio</a></li>
+            <li><a href="#hero" class="footer-link" id="footer-replay-intro">✨ Ver Intro de 3s</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Michi Club 💌</h4>
+          <p class="footer-text" style="font-size: 0.85rem;">
+            Suscríbete y recibe un <strong>10% de descuento</strong> en tu primera orden de productos hechos a mano.
+          </p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" id="newsletter-email" class="newsletter-input" placeholder="tu-correo@ejemplo.com" required>
+            <button id="newsletter-btn" class="newsletter-btn" type="submit">
+              Unirme al Michi Club
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 <strong>Wiwi Shop</strong>. Handmade with love • Hecho en México. Todos los derechos reservados.
+        </div>
+        <div class="footer-bottom-links">
+          <span>🇲🇽 Envíos Seguros a Todo México</span>
+          <span>•</span>
+          <span>100% Artesanal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       10. CART SLIDE-OVER DRAWER
+       ========================================================================= -->
+  <div id="cart-drawer-overlay" class="cart-drawer-overlay" aria-hidden="true">
+    <aside class="cart-drawer" role="dialog" aria-label="Carrito de compras">
+      <div class="cart-header">
+        <h3 class="cart-title">
+          <i class="fa-solid fa-basket-shopping"></i> Tu Canastita Wiwi
+        </h3>
+        <button id="cart-close-btn" class="cart-close-btn" type="button" aria-label="Cerrar carrito">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="free-shipping-tracker">
+        <div id="shipping-tracker-text">Envío gratis en compras mayores a $499 MXN</div>
+        <div class="shipping-bar">
+          <div id="shipping-progress-fill" class="shipping-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div id="cart-drawer-body" class="cart-body">
+        <!-- Cart items dynamically inserted -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal:</span>
+          <span id="cart-subtotal-val">$0 <small>MXN</small></span>
+        </div>
+        <button class="btn-checkout" onclick="openCheckout()" type="button">
+          <i class="fa-solid fa-lock"></i> Proceder al Pago Seguro
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- =========================================================================
+       11. QUICK VIEW MODAL
+       ========================================================================= -->
+  <div id="quick-view-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Vista Rápida del Producto">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeQuickView()" type="button" aria-label="Cerrar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="quick-view-content">
+        <!-- Inserted by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       12. CHECKOUT MODAL SIMULATOR
+       ========================================================================= -->
+  <div id="checkout-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Completar Pedido">
+    <div class="modal-box" style="padding: 32px;">
+      <button class="modal-close-btn" onclick="closeCheckout()" type="button" aria-label="Cerrar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div style="text-align: center; margin-bottom: 20px;">
+        <span class="product-badge badge-handmade">🐾 Pedido 100% Artesanal</span>
+        <h2 style="font-size: 1.8rem; margin: 8px 0; color: var(--mocha-dark);">Completar tu Pedido Wiwi</h2>
+        <p style="font-size: 0.9rem; color: var(--mocha-light);">Empacaremos tus michi-productos con papel de seda, stickers y mucho amor.</p>
+      </div>
+
+      <div id="checkout-summary-box"></div>
+
+      <form onsubmit="return false;" style="display: flex; flex-direction: column; gap: 12px;">
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 700; color: var(--mocha-dark); display: block; margin-bottom: 4px;">Tu Nombre Completo:</label>
+          <input type="text" id="checkout-name" class="newsletter-input" style="width: 100%;" placeholder="Ej. Mariana González" required>
+        </div>
+
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 700; color: var(--mocha-dark); display: block; margin-bottom: 4px;">Dirección de Envío en México:</label>
+          <input type="text" id="checkout-address" class="newsletter-input" style="width: 100%;" placeholder="Calle, Número, Colonia, Ciudad, C.P." required>
+        </div>
+
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 700; color: var(--mocha-dark); display: block; margin-bottom: 4px;">Teléfono WhatsApp (para seguimiento):</label>
+          <input type="tel" id="checkout-phone" class="newsletter-input" style="width: 100%;" placeholder="Ej. 55 1234 5678" required>
+        </div>
+
+        <div style="display: flex; gap: 12px; margin-top: 12px;">
+          <button class="btn-primary" style="flex: 1; justify-content: center;" onclick="completeOrder('simulate')" type="button">
+            <i class="fa-solid fa-check"></i> Confirmar Pedido
+          </button>
+          <button class="btn-secondary" style="flex: 1; justify-content: center; background: #25d366; color: #ffffff; border-color: #25d366;" onclick="completeOrder('whatsapp')" type="button">
+            <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       GLOBAL FLOATING MEMO COMPANION BADGE
+       (Accompanies user throughout the store, collapses on scroll, expands on hover,
+        smoothly scrolls to #feed-memo, and hides when at #feed-memo)
+       ========================================================================= -->
+  <a href="#feed-memo" id="floating-memo-badge" class="floating-memo-badge" aria-label="Ir a la sección de alimentar a Memo" title="¡Haz clic para alimentar a Memo!">
+    <div class="floating-memo-avatar-wrap">
+      <img src="images/memo-closed.png" alt="Memo el Michi" class="floating-memo-avatar-img">
+      <span class="floating-memo-online-dot" title="¡Listo para comer!"></span>
+    </div>
+    <div class="floating-memo-text-wrap">
+      <span class="floating-memo-title">Memo el Michi 🐾</span>
+      <span class="floating-memo-sub">¡Aliméntame abajo! 🐟</span>
+    </div>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="app.js?v=8"></script>
+</body>
+</html>

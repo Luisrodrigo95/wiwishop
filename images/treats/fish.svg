@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <defs>
+            <linearGradient id="fishGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#93c5fd"/>
+                <stop offset="100%" stop-color="#3b82f6"/>
+            </linearGradient>
+        </defs>
+        <path d="M80 50 C70 30 40 30 25 45 L10 35 L10 65 L25 55 C40 70 70 70 80 50 Z" fill="url(#fishGrad)" stroke="#1d4ed8" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="65" cy="46" r="4" fill="#1e293b"/>
+        <circle cx="66" cy="44.5" r="1.5" fill="#ffffff"/>
+        <path d="M50 42 C47 48 47 52 50 58" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M40 44 C37 48 37 52 40 56" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M68 54 Q72 56 68 58" stroke="#ef4444" stroke-width="2" fill="none"/>
+    </svg>

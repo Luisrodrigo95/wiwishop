@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <rect width="300" height="300" rx="28" fill="#fdf2f8"/>
+        <circle cx="150" cy="150" r="95" fill="#fbcfe8" opacity="0.4"/>
+        <!-- Beaded bracelet circle -->
+        <ellipse cx="150" cy="150" rx="75" ry="75" fill="none" stroke="#f472b6" stroke-width="2" stroke-dasharray="2,2"/>
+        <!-- Beads -->
+        <circle cx="75" cy="150" r="12" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
+        <circle cx="95" cy="95" r="12" fill="#fbcfe8" stroke="#f43f5e" stroke-width="2"/>
+        <circle cx="150" cy="75" r="12" fill="#fef08a" stroke="#eab308" stroke-width="2"/>
+        <circle cx="205" cy="95" r="12" fill="#bbf7d0" stroke="#22c55e" stroke-width="2"/>
+        <circle cx="225" cy="150" r="12" fill="#ddd6fe" stroke="#8b5cf6" stroke-width="2"/>
+        <circle cx="205" cy="205" r="12" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+        <circle cx="95" cy="205" r="12" fill="#fbcfe8" stroke="#f43f5e" stroke-width="2"/>
+        <!-- Center charm: Michi head with WIWI -->
+        <circle cx="150" cy="225" r="22" fill="#ffffff" stroke="#e11d48" stroke-width="2.5"/>
+        <polygon points="135,210 140,195 146,207" fill="#ffffff" stroke="#e11d48" stroke-width="2"/>
+        <polygon points="154,207 160,195 165,210" fill="#ffffff" stroke="#e11d48" stroke-width="2"/>
+        <text x="150" y="230" font-family="sans-serif" font-weight="bold" font-size="9" text-anchor="middle" fill="#e11d48">WIWI</text>
+    </svg>
