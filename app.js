@@ -1153,6 +1153,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateFavBadge();
   initMemoStation();
   initFloatingMemoBadge();
+  initArtAtelier();
 
   // 3. Search and Sort handlers
   document.getElementById('catalog-search')?.addEventListener('input', () => {
@@ -1313,3 +1314,141 @@ function initFloatingMemoBadge() {
   // Initial calculation
   updateBadgeState();
 }
+
+// =============================================================================
+// 11. ATELIER DE PINTURAS AL ÓLEO • TÉCNICA REALISMO POR SAMC
+// =============================================================================
+const ARTWORKS_DATA = {
+  michi: {
+    id: 'michi',
+    title: '"Michi de Gala"',
+    theme: 'mascota',
+    format: 'rectangular',
+    bg: 'negro',
+    image: 'images/art/michi-gala-oleo.jpg',
+    formatLabel: 'Lienzo Rectangular Clásico',
+    soporte: 'Lienzo rectangular sobre bastidor de madera de pino',
+    signature: "SAMC '26",
+    desc: 'Retrato hiperrealista de un tierno gatito atigrado con moño borgoña y mirada dulce de ojos cristalinos. Nótese la sutileza de cada pelo individual, el brillo en la pupila y el fondo degradado en veladuras suaves que transmite la calidez y el espíritu de un michi amado.'
+  },
+  puma: {
+    id: 'puma',
+    title: '"Mirada de la Sierra"',
+    theme: 'fauna',
+    format: 'circular',
+    bg: 'negro',
+    image: 'images/art/puma-oleo.jpg',
+    formatLabel: 'Bastidor Circular (Tondo contemporáneo)',
+    soporte: 'Bastidor circular de madera entelado a mano',
+    signature: "SAMC '26",
+    desc: 'Retrato imponente de puma montés sobre bastidor circular. La mirada profunda y el contraste del fondo negro puro (claroscuro) realzan la tridimensionalidad del felino, capturando la nobleza y la fuerza de la fauna mexicana.'
+  },
+  libelula: {
+    id: 'libelula',
+    title: '"Alas de Zafiro"',
+    theme: 'botanico',
+    format: 'rectangular',
+    bg: 'botanico',
+    image: 'images/art/libelula-oleo.jpg',
+    formatLabel: 'Lienzo con Entorno Botánico',
+    soporte: 'Lienzo sobre bastidor de madera reforzado',
+    signature: "SAMC '26",
+    desc: 'Estudio de macro-realismo sobre una libélula verde y azul posada en follaje de higuera. Las alas presentan efectos de transparencia y refracción de luz magistrales, acompañadas por las nervaduras y matices naturales de las hojas botánicas.'
+  },
+  guacamaya: {
+    id: 'guacamaya',
+    title: '"Vuelo Escarlata"',
+    theme: 'fauna',
+    format: 'ovalado',
+    bg: 'atmosferico',
+    image: 'images/art/guacamaya-oleo.jpg',
+    formatLabel: 'Bastidor Ovalado Elegante',
+    soporte: 'Bastidor ovalado clásico de madera',
+    signature: "SAMC '25",
+    desc: 'Majestuosa guacamaya roja retratada en formato ovalado, una forma clásica y refinada de presentación pictórica. Las plumas rojas, amarillas y azules conservan una vibración cromática deslumbrante con fondo atmosférico en tonos oliva y bosque.'
+  },
+  toro: {
+    id: 'toro',
+    title: '"Furia y Temple"',
+    theme: 'fauna',
+    format: 'circular',
+    bg: 'negro',
+    image: 'images/art/toro-oleo.jpg',
+    formatLabel: 'Bastidor Circular (Tondo contemporáneo)',
+    soporte: 'Bastidor circular de madera entelado',
+    signature: "SAMC '25",
+    desc: 'Poderoso estudio anatómico de un toro con astas esculpidas al óleo y juego de luces dramático al estilo claroscuro barroco. La textura del pelaje castaño y la intensidad de la mirada demuestran la destreza del realismo artesanal.'
+  },
+  tucan: {
+    id: 'tucan',
+    title: '"Canto del Trópico"',
+    theme: 'fauna',
+    format: 'ovalado',
+    bg: 'atmosferico',
+    image: 'images/art/tucan-oleo.jpg',
+    formatLabel: 'Bastidor Ovalado Elegante',
+    soporte: 'Bastidor ovalado de madera entelado a mano',
+    signature: "SAMC '26",
+    desc: 'Espectacular retrato al óleo de un tucán toco en bastidor ovalado. Destacan las gradaciones solares en el pico (ámbar, mandarina y amarillo) con punta azabache, la viveza del iris celeste y el plumaje oscuro aterciopelado con ramas en perspectiva aérea y fondo selvático sutil.'
+  }
+};
+
+const WIWI_WHATSAPP_NUMBER = '525500000000';
+
+function initArtAtelier() {
+  // Close modal on backdrop click
+  document.getElementById('art-detail-modal')?.addEventListener('click', (e) => {
+    if (e.target.id === 'art-detail-modal') closeArtModal();
+  });
+}
+
+function openArtModal(artId) {
+  const art = ARTWORKS_DATA[artId];
+  if (!art) return;
+
+  const modal = document.getElementById('art-detail-modal');
+  const imgEl = document.getElementById('art-modal-img');
+  const titleEl = document.getElementById('art-modal-title');
+  const formatEl = document.getElementById('art-modal-format');
+  const descEl = document.getElementById('art-modal-desc');
+  const soporteEl = document.getElementById('art-modal-soporte');
+  const signEl = document.getElementById('art-modal-signature');
+  const quoteBtn = document.getElementById('art-modal-quote-btn');
+
+  if (imgEl) imgEl.src = art.image;
+  if (titleEl) titleEl.textContent = art.title;
+  if (formatEl) formatEl.textContent = art.formatLabel;
+  if (descEl) descEl.textContent = art.desc;
+  if (soporteEl) soporteEl.textContent = art.soporte;
+  if (signEl) signEl.textContent = art.signature;
+
+  if (quoteBtn) {
+    quoteBtn.onclick = () => {
+      quoteArtworkWhatsApp(art.id);
+    };
+  }
+
+  modal?.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+window.openArtModal = openArtModal;
+
+function closeArtModal() {
+  const modal = document.getElementById('art-detail-modal');
+  modal?.classList.remove('active');
+  document.body.style.overflow = '';
+}
+window.closeArtModal = closeArtModal;
+
+function quoteArtworkWhatsApp(artId) {
+  const art = ARTWORKS_DATA[artId];
+  let msgText = '';
+  if (art) {
+    msgText = `¡Hola Wiwi Shop! 🎨 Me gustaría cotizar una pintura al óleo personalizada similar a "${art.title}" (${art.formatLabel}, técnica realismo por SAMC). ¿Podrían brindarme información y asesoría?`;
+  } else {
+    msgText = `¡Hola Wiwi Shop! 🎨 Me gustaría solicitar una cotización personalizada para una pintura al óleo en técnica realismo por SAMC. ¿Podrían brindarme información?`;
+  }
+  const url = `https://wa.me/${WIWI_WHATSAPP_NUMBER}?text=${encodeURIComponent(msgText)}`;
+  window.open(url, '_blank');
+}
+window.quoteArtworkWhatsApp = quoteArtworkWhatsApp;

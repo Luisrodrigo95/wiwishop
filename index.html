@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Wiwi Shop Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
 
@@ -130,6 +130,11 @@
           <li class="nav-item">
             <a href="#departments" class="nav-link highlight-blue" data-nav-dept="cruz-azulito" onclick="setCatalogFilter('cruz-azulito')">
               ⚽ Cruz Azulito <span class="nav-badge-new">Fan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#oleo-atelier" class="nav-link highlight-art">
+              🎨 Óleo Realista <span class="nav-badge-art">Atelier</span>
             </a>
           </li>
           <li class="nav-item">
@@ -305,6 +310,310 @@
         <!-- Products Grid Container -->
         <div id="products-grid" class="products-grid">
           <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. ATELIER DE PINTURAS AL ÓLEO • TÉCNICA REALISMO
+         (Retratos por encargo por la artista SAMC: Obras terminadas y Cotizador)
+         ========================================================================= -->
+    <section id="oleo-atelier" class="oleo-atelier-section">
+      <div class="container">
+        <!-- Atelier Header -->
+        <div class="atelier-header">
+          <div class="atelier-badge">
+            <span>🎨</span> ATELIER WIWI • RETRATOS POR ENCARGO
+          </div>
+          <h2 class="atelier-title">Pinturas al Óleo • Técnica Realismo</h2>
+          <p class="atelier-subtitle">
+            Obras maestras 100% hechas a mano sobre lienzo por la artista <strong>SAMC</strong>. 
+            Inmortaliza a tu fiel compañero michi o lomito, fauna silvestre o tu retrato soñado 
+            con riqueza de textura, capas de veladuras y realismo de nivel galería.
+          </p>
+
+          <!-- Highlight Quality Badges -->
+          <div class="atelier-features-pills">
+            <span class="art-pill"><i class="fa-solid fa-palette"></i> Óleo Profesional de Alta Gama</span>
+            <span class="art-pill"><i class="fa-solid fa-circle-dot"></i> Bastidores Redondos, Ovalados y Rectangulares</span>
+            <span class="art-pill"><i class="fa-solid fa-box-archive"></i> Embalaje de Alta Protección</span>
+            <span class="art-pill"><i class="fa-solid fa-signature"></i> Obra Original Firmada (SAMC)</span>
+          </div>
+        </div>
+
+        <!-- 1. Gallery of Delivered Masterpieces -->
+        <div class="atelier-gallery-header">
+          <div class="gallery-title-group">
+            <span class="gallery-tag">Portafolio de Entregas</span>
+            <h3 class="gallery-title">Obras Recientes Terminadas</h3>
+          </div>
+          <p class="gallery-hint">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> Toca o haz clic en cualquier obra para examinar el pincel y detalles
+          </p>
+        </div>
+
+        <!-- Pricing & WhatsApp Notice Banner -->
+        <div class="atelier-pricing-banner">
+          <div class="pricing-banner-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="pricing-banner-text">
+            <strong>Cotizaciones 100% Personalizadas por WhatsApp</strong>
+            <p>Las pinturas al óleo no tienen un precio fijo. El valor final depende exclusivamente del <strong>tamaño del lienzo</strong> y de la <strong>complejidad de la obra</strong> (número de sujetos, nivel de detalle y tipo de fondo).</p>
+          </div>
+          <a href="https://wa.me/525500000000?text=¡Hola%20Wiwi%20Shop!%20🎨%20Me%20gustaría%20solicitar%20una%20cotización%20para%20una%20pintura%20al%20óleo%20personalizada%20en%20técnica%20realismo." target="_blank" rel="noopener noreferrer" class="btn-wa-pill">
+            <i class="fa-brands fa-whatsapp"></i> Iniciar Cotización
+          </a>
+        </div>
+
+        <div class="art-gallery-grid">
+          <!-- Card 1: Michi de Gala -->
+          <div class="art-card" onclick="openArtModal('michi')" role="button" tabindex="0" aria-label="Ver obra Michi de Gala">
+            <div class="art-img-wrapper">
+              <img src="images/art/michi-gala-oleo.jpg" alt="Pintura al óleo realista de gato con moño" class="art-img" loading="lazy">
+              <div class="art-overlay-glass">
+                <span class="art-zoom-btn"><i class="fa-solid fa-magnifying-glass"></i> Inspeccionar</span>
+              </div>
+              <span class="art-format-badge badge-rectangular">Lienzo Rectangular</span>
+            </div>
+            <div class="art-info">
+              <div class="art-meta-top">
+                <span class="art-theme">Retrato de Mascota</span>
+                <span class="art-signature">Firma: SAMC '26</span>
+              </div>
+              <h4 class="art-card-title">"Michi de Gala"</h4>
+              <p class="art-card-desc">
+                Retrato hiperrealista de gatito atigrado con moño borgoña. Mirada dulce, bigotes finos y pelaje suave con iluminación etérea.
+              </p>
+              <div class="art-card-footer">
+                <span class="art-detail-pill">Óleo sobre lienzo</span>
+                <button class="btn-quote-this" type="button" onclick="event.stopPropagation(); quoteArtworkWhatsApp('michi')">
+                  <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Puma / Mirada de la Sierra -->
+          <div class="art-card" onclick="openArtModal('puma')" role="button" tabindex="0" aria-label="Ver obra Mirada de la Sierra">
+            <div class="art-img-wrapper">
+              <img src="images/art/puma-oleo.jpg" alt="Pintura al óleo realista de puma en bastidor redondo" class="art-img" loading="lazy">
+              <div class="art-overlay-glass">
+                <span class="art-zoom-btn"><i class="fa-solid fa-magnifying-glass"></i> Inspeccionar</span>
+              </div>
+              <span class="art-format-badge badge-circular">Bastidor Circular (Tondo)</span>
+            </div>
+            <div class="art-info">
+              <div class="art-meta-top">
+                <span class="art-theme">Fauna Silvestre</span>
+                <span class="art-signature">Firma: SAMC '26</span>
+              </div>
+              <h4 class="art-card-title">"Mirada de la Sierra"</h4>
+              <p class="art-card-desc">
+                Puma montés de mirada penetrante y pelaje texturizado sobre fondo negro puro que resalta cada rasgo y detalle felino.
+              </p>
+              <div class="art-card-footer">
+                <span class="art-detail-pill">Tondo circular</span>
+                <button class="btn-quote-this" type="button" onclick="event.stopPropagation(); quoteArtworkWhatsApp('puma')">
+                  <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Libélula / Alas de Zafiro -->
+          <div class="art-card" onclick="openArtModal('libelula')" role="button" tabindex="0" aria-label="Ver obra Alas de Zafiro">
+            <div class="art-img-wrapper">
+              <img src="images/art/libelula-oleo.jpg" alt="Pintura al óleo de libélula sobre follaje botánico" class="art-img" loading="lazy">
+              <div class="art-overlay-glass">
+                <span class="art-zoom-btn"><i class="fa-solid fa-magnifying-glass"></i> Inspeccionar</span>
+              </div>
+              <span class="art-format-badge badge-rectangular">Lienzo con Entorno</span>
+            </div>
+            <div class="art-info">
+              <div class="art-meta-top">
+                <span class="art-theme">Macro Realismo</span>
+                <span class="art-signature">Firma: SAMC '26</span>
+              </div>
+              <h4 class="art-card-title">"Alas de Zafiro"</h4>
+              <p class="art-card-desc">
+                Libélula verde y azul con alas cristalinas traslúcidas posada en hojas de higuera. Efecto de luz y venaciones hiperdetalladas.
+              </p>
+              <div class="art-card-footer">
+                <span class="art-detail-pill">Fondo botánico</span>
+                <button class="btn-quote-this" type="button" onclick="event.stopPropagation(); quoteArtworkWhatsApp('libelula')">
+                  <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Guacamaya / Vuelo Escarlata -->
+          <div class="art-card" onclick="openArtModal('guacamaya')" role="button" tabindex="0" aria-label="Ver obra Vuelo Escarlata">
+            <div class="art-img-wrapper">
+              <img src="images/art/guacamaya-oleo.jpg" alt="Pintura al óleo de guacamaya en bastidor ovalado" class="art-img" loading="lazy">
+              <div class="art-overlay-glass">
+                <span class="art-zoom-btn"><i class="fa-solid fa-magnifying-glass"></i> Inspeccionar</span>
+              </div>
+              <span class="art-format-badge badge-oval">Bastidor Ovalado</span>
+            </div>
+            <div class="art-info">
+              <div class="art-meta-top">
+                <span class="art-theme">Aves Neotropicales</span>
+                <span class="art-signature">Firma: SAMC '25</span>
+              </div>
+              <h4 class="art-card-title">"Vuelo Escarlata"</h4>
+              <p class="art-card-desc">
+                Guacamaya roja sobre bastidor ovalado clásico. Plumaje vibrante en rojos, amarillos y azules con atmósfera selvática suave.
+              </p>
+              <div class="art-card-footer">
+                <span class="art-detail-pill">Formato ovalado</span>
+                <button class="btn-quote-this" type="button" onclick="event.stopPropagation(); quoteArtworkWhatsApp('guacamaya')">
+                  <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Toro / Furia y Temple -->
+          <div class="art-card" onclick="openArtModal('toro')" role="button" tabindex="0" aria-label="Ver obra Furia y Temple">
+            <div class="art-img-wrapper">
+              <img src="images/art/toro-oleo.jpg" alt="Pintura al óleo de toro en bastidor circular" class="art-img" loading="lazy">
+              <div class="art-overlay-glass">
+                <span class="art-zoom-btn"><i class="fa-solid fa-magnifying-glass"></i> Inspeccionar</span>
+              </div>
+              <span class="art-format-badge badge-circular">Bastidor Circular (Tondo)</span>
+            </div>
+            <div class="art-info">
+              <div class="art-meta-top">
+                <span class="art-theme">Fuerza & Claroscuro</span>
+                <span class="art-signature">Firma: SAMC '25</span>
+              </div>
+              <h4 class="art-card-title">"Furia y Temple"</h4>
+              <p class="art-card-desc">
+                Toro imponente con astas esculpidas al óleo y estudio anatómico en claroscuro. Gran fuerza visual y textura envolvente.
+              </p>
+              <div class="art-card-footer">
+                <span class="art-detail-pill">Tondo circular</span>
+                <button class="btn-quote-this" type="button" onclick="event.stopPropagation(); quoteArtworkWhatsApp('toro')">
+                  <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Tucán / Canto del Trópico -->
+          <div class="art-card" onclick="openArtModal('tucan')" role="button" tabindex="0" aria-label="Ver obra Canto del Trópico">
+            <div class="art-img-wrapper">
+              <img src="images/art/tucan-oleo.jpg" alt="Pintura al óleo realista de tucán en bastidor ovalado" class="art-img" loading="lazy">
+              <div class="art-overlay-glass">
+                <span class="art-zoom-btn"><i class="fa-solid fa-magnifying-glass"></i> Inspeccionar</span>
+              </div>
+              <span class="art-format-badge badge-oval">Bastidor Ovalado</span>
+            </div>
+            <div class="art-info">
+              <div class="art-meta-top">
+                <span class="art-theme">Fauna Tropical</span>
+                <span class="art-signature">Firma: SAMC '26</span>
+              </div>
+              <h4 class="art-card-title">"Canto del Trópico"</h4>
+              <p class="art-card-desc">
+                Tucán toco con pico en gradiente ámbar y negro, mirada expresiva y plumaje azabache sobre bastidor ovalado con fondo selvático.
+              </p>
+              <div class="art-card-footer">
+                <span class="art-detail-pill">Formato ovalado</span>
+                <button class="btn-quote-this" type="button" onclick="event.stopPropagation(); quoteArtworkWhatsApp('tucan')">
+                  <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Step-by-Step Commission Process -->
+        <div class="atelier-process-card">
+          <h3 class="process-title">¿Cómo funciona el proceso de encargo? 🎨</h3>
+          <div class="process-steps-grid">
+            <div class="step-card">
+              <span class="step-num">1</span>
+              <div class="step-icon">📸</div>
+              <h4>Envío de Fotos</h4>
+              <p>Envías fotos con buena iluminación de tu mascota, animal o idea.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-num">2</span>
+              <div class="step-icon">📐</div>
+              <h4>Elección de Formato</h4>
+              <p>Elegimos bastidor circular, ovalado o rectangular y paleta de color.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-num">3</span>
+              <div class="step-icon">🖌️</div>
+              <h4>Creación al Óleo</h4>
+              <p>SAMC pinta capa por capa con técnicas de realismo y comparte avances.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-num">4</span>
+              <div class="step-icon">📦</div>
+              <h4>Secado & Envío</h4>
+              <p>Tiempo de secado natural al óleo y empaque ultra seguro a todo México.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Direct WhatsApp Commission Section -->
+        <div id="art-commission-card" class="atelier-commission-card">
+          <div class="commission-card-inner">
+            <div class="commission-badge">
+              <i class="fa-brands fa-whatsapp"></i> ATENCIÓN DIRECTA Y ENCARGOS
+            </div>
+            <h3 class="commission-title">¿Deseas encargar tu pintura al óleo personalizada? 🎨</h3>
+            <p class="commission-desc">
+              Todas las cotizaciones se realizan de forma directa y personalizada a través de <strong>WhatsApp</strong>. 
+              Platícanos tu idea, compártenos fotos de referencia de tu mascota o motivo, y con gusto te asesoramos 
+              para crear una obra única e irrepetible.
+            </p>
+
+            <div class="commission-pricing-notice">
+              <div class="notice-icon"><i class="fa-solid fa-circle-info"></i></div>
+              <div class="notice-content">
+                <strong>¿Cómo se determina el costo de una obra?</strong>
+                <p>
+                  No manejamos precios fijos en los cuadros: el presupuesto final depende exclusivamente del 
+                  <strong>tamaño del lienzo</strong> (desde medidas compactas hasta gran formato) y de la 
+                  <strong>complejidad de la obra</strong> (cantidad de sujetos a retratar, nivel de detalle y fondo seleccionado).
+                </p>
+              </div>
+            </div>
+
+            <div class="commission-features-row">
+              <div class="commission-feature-item">
+                <span class="feat-icon">📐</span>
+                <strong>Formatos a la Medida</strong>
+                <span>Bastidores circulares (tondo), ovalados clásicos o rectangulares de galería.</span>
+              </div>
+              <div class="commission-feature-item">
+                <span class="feat-icon">🖌️</span>
+                <strong>Óleo & Técnica Realismo</strong>
+                <span>Elaboración artesanal por capas y veladuras con firma original de SAMC.</span>
+              </div>
+              <div class="commission-feature-item">
+                <span class="feat-icon">📦</span>
+                <strong>Empaque & Envío Seguro</strong>
+                <span>Embalaje reforzado de alta protección y envíos a toda la República Mexicana.</span>
+              </div>
+            </div>
+
+            <div class="commission-cta-wrap">
+              <a href="https://wa.me/525500000000?text=¡Hola%20Wiwi%20Shop!%20🎨%20Me%20gustaría%20solicitar%20una%20cotización%20para%20una%20pintura%20al%20óleo%20personalizada%20en%20técnica%20realismo." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn-whatsapp-commission">
+                <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje a WhatsApp para Cotizar
+              </a>
+              <span class="commission-note-small">
+                <i class="fa-solid fa-comments"></i> Te respondemos a la brevedad con presupuesto y asesoría personalizada sin compromiso.
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -685,7 +994,59 @@
     </div>
   </a>
 
+  <!-- =========================================================================
+       ARTWORK DETAIL MODAL (High-Resolution Zoom & Inspection)
+       ========================================================================= -->
+  <div id="art-detail-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Detalle de Obra al Óleo">
+    <div class="modal-box art-modal-box">
+      <button class="modal-close-btn" onclick="closeArtModal()" type="button" aria-label="Cerrar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="art-modal-grid">
+        <div class="art-modal-img-col">
+          <img id="art-modal-img" src="images/art/puma-oleo.jpg" alt="Pintura al óleo realista" class="art-modal-img">
+          <span id="art-modal-format" class="art-modal-format-tag">Bastidor Circular (Tondo)</span>
+        </div>
+        <div class="art-modal-info-col">
+          <div class="art-modal-badge">ÓLEO ORIGINAL • TÉCNICA REALISMO</div>
+          <h3 id="art-modal-title" class="art-modal-title">"Mirada de la Sierra"</h3>
+          <p class="art-modal-author">Artista: <strong>SAMC</strong></p>
+          <p id="art-modal-desc" class="art-modal-desc">
+            Puma montés de mirada penetrante y pelaje texturizado sobre fondo negro puro que resalta cada rasgo y detalle felino.
+          </p>
+
+          <div class="art-modal-specs">
+            <div class="spec-row">
+              <span class="spec-label">Técnica:</span>
+              <span class="spec-val">Óleo profesional por capas y veladuras</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Soporte:</span>
+              <span id="art-modal-soporte" class="spec-val">Bastidor de madera circular entelado</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Acabado:</span>
+              <span class="spec-val">Óleo natural con textura y brillo tradicional de pigmento</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Firma:</span>
+              <span id="art-modal-signature" class="spec-val">SAMC '26</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Cotización:</span>
+              <span class="spec-val">Personalizada por WhatsApp (según tamaño y complejidad)</span>
+            </div>
+          </div>
+
+          <button id="art-modal-quote-btn" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 18px; background: #25d366; border-color: #25d366; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);" type="button">
+            <i class="fa-brands fa-whatsapp"></i> Cotizar esta obra por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- JavaScript -->
-  <script src="app.js?v=8"></script>
+  <script src="app.js?v=12"></script>
 </body>
 </html>
